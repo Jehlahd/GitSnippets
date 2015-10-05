@@ -1,0 +1,38 @@
+HTML:
+
+<span class="icon-round-wrap"><span class="icon-alert dead-center"></span></span>
+
+CSS:
+
+.icon-round-wrap{
+  color:#fff;
+  background-color: #000066;
+}
+
+/* Helpers: Icons */
+
+.icon-left {
+  margin: 0 10px 0 0;
+}
+
+.icon-right {
+  margin: 0 0 0 10px;
+}
+
+.icon-round-wrap {
+  font-size: 16px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+}
+
+.dead-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}

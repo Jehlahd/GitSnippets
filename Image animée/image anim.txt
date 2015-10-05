@@ -1,0 +1,83 @@
+JQuery:
+$(".banner-image-block").imagesLoaded(function(){
+  $(".banner-img").addClass("banner-img-animate");
+});
+
+Angular dans le controller
+angular.module('showRoomApp')
+  .controller('MainCtrl', function () {
+    angular.element(".banner-image-block").imagesLoaded(function(){
+      angular.element(".banner-img").addClass("banner-img-animate");
+    })
+  });
+
+HTML:
+<div class="banner-img-block clearfix">
+      <img src="http://placehold.it/280x600" alt="Banner Home: 1" class="banner-img banner-img-1" width="280">
+      <img src="http://placehold.it/280x600" alt="Banner Home: 2" class="banner-img banner-img-2" width="280">
+      <img src="http://placehold.it/280x600" alt="Banner Home: 3" class="banner-img banner-img-3" width="280">
+    </div>
+
+
+/*-------------------------------------*/
+/*BANNER*/
+
+.banner-img-block{
+  margin: 0 auto 25px auto;
+  width: 840px;
+}
+
+.banner-img{
+  float:left;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 280px;
+  transform: scale(0.85);
+  transform: scale(0.85);
+  -webkit-transform-origin: top;
+}
+
+.banner-img-animate{
+  transition: all 0.4s linear 0.8s;
+  -webkit-transition: all 0.4s linear 0.8s;
+}
+
+.banner-img-1{
+  top: 55px;
+  left: 280px;
+  transform: scale(0.78);
+  -webkit-transform: scale(0.78);
+  z-index: 2;
+}
+
+.banner-img-1.banner-img-animate{
+  left : 10px;
+  top: 55px;
+  transform: scale(0.85);
+  -webkit-transform: scale(0.85);
+}
+
+.banner-img-2{
+  transform: scale(0.85);
+  -webkit-transform: scale(0.85);
+  z-index: 3;
+}
+.banner-img-2.banner-img-animate{
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.banner-img-3{
+  top: 110px;
+  right: 280px;
+  transform: scale(0.71);
+  -webkit-transform: scale(0.71);
+  z-index: 1;
+}
+
+.banner-img-3.banner-img-animate{
+  right: 10px;
+  transform: scale(0.85);
+  -webkit-transform: scale(0.85);
+  top: 55px;
+}
